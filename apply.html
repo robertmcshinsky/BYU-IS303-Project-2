@@ -8,7 +8,8 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <!--I changed the name here-->
+    <title>Apply Page</title>
     <!-- Font Awesome icons (free version)-->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
@@ -34,7 +35,7 @@
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
           </div>
-  
+ <form action="/submit" method="POST">
               <label for="sFirstName">First Name:</label>
     <input type="text" id="sFirstName" name="sFirstName">
     <br>
@@ -48,7 +49,7 @@
     <input type="text" id="sCity" name="sCity">
     <br>
     <label for="listState">State: </label>
-    <select name="state" id="listState" name="listState">
+    <select id="listState" name="listState">
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>
@@ -109,8 +110,8 @@
       
             <br /><br />
       
-            <button type="button" onclick="">SUBMIT</button>
-    
+            <button type="submit">SUBMIT</button>
+  </form>
         </div>
         </div>
       </section>
