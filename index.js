@@ -2,11 +2,22 @@ const express = require("express");
 
 let app = express();
 let path =  require("path");
+//this should make it so we can see the css and java through the server
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-//
-app.get("/",(req, res)=>{
+
+//apply page
+app.get("/apply.html",(req, res)=>{
     res.sendFile(path.join(__dirname+"/apply.html"));
+});
+//home page
+app.get("/",(req, res)=>{
+    res.sendFile(path.join(__dirname+"/index.html"));
+});
+//about page
+app.get("/about.html",(req, res)=>{
+    res.sendFile(path.join(__dirname+"/about.html"));
 });
 //submit page
 app.post("/submit",(req, res)=>{
